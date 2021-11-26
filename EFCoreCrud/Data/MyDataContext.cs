@@ -9,7 +9,7 @@ public class MyDataContext : DbContext
 
     protected override void OnConfiguring(DbContextOptionsBuilder options)
     {
-        options.UseInMemoryDatabase("todos");
+        options.UseSqlite("DataSource=app.db; Cache=Shared");
         // options.LogTo(Console.WriteLine); // Printa o log da consulta (query).
     }
 
